@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbiting Beyond Acad A</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #0d1b2a, #000814);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Floating Stars */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: moveStars 100s linear infinite;
+    z-index:-1;
+}
+@keyframes moveStars{
+    from{transform:translate(0,0);}
+    to{transform:translate(-500px,-500px);}
+}
+
+/* Navigation */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(5px);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+nav a{
+    text-decoration:none;
+    color:#00d4ff;
+    font-family:'Orbitron', sans-serif;
+    font-size:18px;
+    transition:0.3s;
+}
+nav a:hover{
+    color:white;
+    text-shadow:0 0 15px #00d4ff;
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+    min-height:100vh;
+}
+
+/* 3D Title */
+.title{
+    font-family:'Orbitron', sans-serif;
+    font-size:60px;
+    text-align:center;
+    text-shadow:0 0 20px #00d4ff, 0 0 40px #0077ff;
+    margin-bottom:30px;
+}
+
+/* Cards */
+.card-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+    margin-top:40px;
+}
+.card{
+    width:250px;
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    backdrop-filter:blur(8px);
+    text-align:center;
+    transition:0.5s;
+    transform-style:preserve-3d;
+}
+.card:hover{
+    transform:rotateY(15deg) rotateX(10deg) scale(1.05);
+    box-shadow:0 0 25px #00d4ff;
+}
+.card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:10px;
+}
+
+/* Member Cards */
+.member{
+    width:300px;
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    margin:20px;
+    transition:0.5s;
+}
+.member:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00d4ff;
+}
+.member img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* Footer */
+footer{
+    background:black;
+    padding:40px;
+    text-align:center;
+}
+footer p{
+    margin:10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#members">MEMBERS</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <h1 class="title">Orbiting Beyond Acad A</h1>
+
+    <h2>Definition of Acad A - STEM</h2>
+    <p>
+    Academic A - STEM focuses on Science, Technology, Engineering, and Mathematics, with a strong emphasis on mathematical mastery. 
+    Our strand consists of many subjects, but mathematics serves as our foundation. In this strand, students do not just memorize formulas — they apply them to solve real-world problems. 
+    Whether designing structures, analyzing systems, coding software, or teaching advanced theories, we develop precision and analytical thinking. 
+    This strand trains students to think logically, creatively, and critically. 
+    We learn to use modern technology and tools to solve complex challenges. 
+    Collaboration is also important as we work together on research, experiments, and projects. 
+    Ultimately, STEM prepares us for the demands of the fourth industrial revolution by transforming abstract ideas into real-world innovations.
+    </p>
+
+    <h2 style="margin-top:40px;">Future Careers</h2>
+    <div class="card-container">
+        <div class="card"><img src="https://source.unsplash.com/300x200/?engineering"><h3>Civil Engineering</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?factory"><h3>Industrial Engineering</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?ship"><h3>Marine Engineering</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?architecture"><h3>Architecture</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?teacher,math"><h3>Math Teacher</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?ocean,biology"><h3>Marine Biologist</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?environment"><h3>Environmental Scientist</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?coding"><h3>Web Developer</h3></div>
+        <div class="card"><img src="https://source.unsplash.com/300x200/?laboratory"><h3>Biologist</h3></div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1 class="title">About Our Strand</h1>
+
+    <h2>Role in Society</h2>
+    <p>
+    Academic A plays an important role in society by developing analytical thinkers and problem solvers. 
+    It prepares students for diverse professional careers that require precision, innovation, and critical thinking. 
+    Through mathematics and science, we learn to analyze systems, solve real-world problems, and contribute to technological and scientific advancement.
+    </p>
+
+    <h2 style="margin-top:40px;">Why We Chose This Strand</h2>
+    <ul>
+        <li><b>Rouie:</b> I chose this strand to challenge myself and develop strong mental discipline.</li>
+        <li><b>Jerome:</b> I want to become a marine engineer and improve my math skills early.</li>
+        <li><b>Andrei C.:</b> I dream of becoming a Mathematics teacher and I truly love solving math problems.</li>
+        <li><b>Kurt:</b> Becoming an engineer has been my dream since childhood.</li>
+        <li><b>Andrei G.:</b> I chose this strand because I like math and it prepares me for my future job.</li>
+    </ul>
+
+    <h2 style="margin-top:40px;">Tips for Future STEM Students</h2>
+    <ul>
+        <li><b>Rouie:</b> Turn your "I can't" into "I can't yet." Stay persistent.</li>
+        <li><b>Jerome:</b> Practice basic math daily and take important notes.</li>
+        <li><b>Andrei C.:</b> Study advanced topics early and manage your time wisely.</li>
+        <li><b>Kurt:</b> Stay focused and manage your time properly.</li>
+        <li><b>Andrei G.:</b> Be ready to study and practice a lot.</li>
+    </ul>
+</section>
+
+<!-- MEMBERS -->
+<section id="members">
+    <h1 class="title">Meet the Explorers</h1>
+
+    <div class="card-container">
+
+        <div class="member">
+            <img src="https://source.unsplash.com/300x300/?portrait">
+            <h3>Rouie</h3>
+            <p>Age: 16</p>
+            <p>Birthday: October 14, 2009</p>
+            <p>Favorite Song: Unwritten</p>
+            <p><i>"Turn panic into organic growth."</i></p>
+        </div>
+
+        <div class="member">
+            <img src="https://source.unsplash.com/300x300/?student">
+            <h3>Jerome</h3>
+            <p>Age: 17</p>
+            <p>Birthday: September 7, 2008</p>
+            <p>Favorite Song: It's My Life</p>
+            <p><i>"Aim for progress, not perfection."</i></p>
+        </div>
+
+        <div class="member">
+            <img src="https://source.unsplash.com/300x300/?gamer">
+            <h3>Andrei C.</h3>
+            <p>Age: 16</p>
+            <p>Birthday: August 15, 2009</p>
+            <p><i>"Solve life one step at a time."</i></p>
+        </div>
+
+        <div class="member">
+            <img src="https://source.unsplash.com/300x300/?young,man">
+            <h3>Kurt</h3>
+            <p>Age: 16</p>
+            <p>Birthday: July 27, 2009</p>
+            <p><i>"Dream big, engineer bigger."</i></p>
+        </div>
+
+        <div class="member">
+            <img src="https://source.unsplash.com/300x300/?teen">
+            <h3>Andrei G.</h3>
+            <p>Age: 17</p>
+            <p>Birthday: May 14, 2008</p>
+            <p><i>"It may be hard at first, but never give up."</i></p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h2>About Our Website</h2>
+    <p>This solar system–themed STEM blogsite represents our journey in Academic A. 
+    Like planets orbiting the sun, we revolve around knowledge, innovation, and mathematical mastery.</p>
+
+    <h3>Contact Us</h3>
+    <p>Jerome: joyjeromejr.bonifacio@email.lcup.edu.ph</p>
+    <p>Andrei C.: andreiryan.chico@email.lcup.edu.ph</p>
+    <p>© 2026 Orbiting Beyond Acad A</p>
+</footer>
+
+</body>
+</html>
